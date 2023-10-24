@@ -70,10 +70,14 @@ body * {
   left: 0;
   z-index: 1;
   transform: translateY(-50%);
+  
+  animation: voltar 0.2s;
 }
 .light #switch button{
- right: 0;
- left: initial;
+  animation: avancar 0.3s forwards;
+}
+#switch button:hover{
+  outline: 8px solid var(--highlight-color);
 }
 
 #switch span {
@@ -155,3 +159,21 @@ footer {
     --bg-url: url(./assets/bg-desktop-light.jpg);
   }
 }
+/* animações */
+@keyframes avancar{
+  from{
+    left:0;
+  }
+  to{
+    left:50%;
+  }
+}
+@keyframes voltar{
+  from{
+    left:50%;
+  }
+  to{
+    left:0;
+  }
+}
+
